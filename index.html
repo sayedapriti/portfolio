@@ -15,7 +15,7 @@
     :root {
       --primary: #87CEEB;
       --secondary: #F8F8FF;
-      --accent: #1f4fd8;
+      --accent: #F8F8FF;
       --text-dark: #1e293b;
       --text-light: #64748b;
     }
@@ -46,7 +46,7 @@
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -108,8 +108,8 @@
     }
 
     .hero img {
-      width: 160px;
-      height: 160px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
@@ -127,12 +127,54 @@
       font-size: 1.1rem;
       color: var(--text-light);
     }
-
+    
     .scroll-down {
       margin-top: 40px;
       font-size: 1.5rem;
       animation: bounce 2s infinite;
       color: var(--accent);
+    }
+    /* ================= HERO BUTTONS ================= */
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 50px; 
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Download CV Button Design */
+    .btn-download {
+      background: #fff;
+      color: var(--text-dark);
+      border: 2px solid #fff;
+    }
+
+    
+    .btn-hire {
+      background: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--text-dark);
+    }
+
+    /* Hover Effects */
+    .btn:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background: var(--text-dark);
+      color: #fff;
+      border-color: var(--text-dark);
     }
 
     /* ================= ABOUT ================= */
@@ -162,7 +204,8 @@
       backdrop-filter: blur(12px);
       border-radius: 16px;
       padding: 25px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px rgba(0, 3, 11, 0.08);
+      
       transition: transform 0.3s;
     }
 
@@ -219,43 +262,135 @@
       font-size: 0.8rem;
       margin-right: 5px;
     }
+    
 
     /* ================= CONTACT ================= */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+    
+.contact-grid {
+  display: flex; 
+  gap: 50px;
+  align-items: stretch; 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-grid .card {
+  flex: 1; 
+  min-width: 300px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  margin-bottom: 0; 
+}
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
+form textarea {
+  flex-grow: 1; 
+  resize: none; 
+}
 
-    form button {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.info-card, .form-card {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-    form button:hover {
-      background: #163bbf;
-    }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #f1f5f9;
-      color: var(--text-light);
-    }
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.info-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.social-links a {
+  color: #000;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #87CEEB; 
+  transform: translateY(-3px);
+}
+
+
+form input, form textarea {
+  background: #f1f5f9; 
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+
+.send-btn {
+  background: #B9E5F3 !important; 
+  color: #000 !important;
+  font-weight: 600;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #87CEEB !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  z-index: 1000;
+  border: none;
+}
+
+#scroll-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+    
 
     /* ================= ANIMATIONS ================= */
     @keyframes fadeIn {
@@ -291,18 +426,28 @@
 
 <section class="hero" id="home">
   <div class="hero-content">
-    <img src="my-photo.png.png" alt="Profile">
-    <h1>Sayeda Lutfunnesa Priti</h1>
-    <p id="typing"></p>
-    <div class="scroll-down"><i class="fas fa-angle-down"></i></div>
+  <img src="my photo.png.jpeg" alt="Profile">
+  <h1>Sayeda Lutfunnesa Priti</h1>
+  <p id="typing"></p>
+  
+  <div class="hero-buttons">
+    <a href="your-cv-file.pdf" class="btn btn-download" download>
+      <i class="fas fa-download"></i> Download CV
+    </a>
+    <a href="#contact" class="btn btn-hire">
+      Hire Me
+    </a>
   </div>
+
+  <div class="scroll-down"><i class="fas fa-angle-down"></i></div>
+</div>
 </section>
 
 <section id="about">
   <div class="container">
     <div class="section-title">
       <h2>About Me</h2>
-      <p>CSE student with strong interest in UI/UX and problem solving</p>
+      <p>I’m  Priti, a Computer Science & Engineering undergraduate at International Islamic University Chittagong (IIUC). I’m passionate about learning new technologies, solving problems, and creating user-friendly digital experiences. I enjoy working on web and UI/UX projects while continuously improving my coding and design skills.</p>
     </div>
     <div class="timeline">
       <div class="card">B.Sc in CSE – IIUC (Current)</div>
@@ -329,13 +474,14 @@
     <div class="section-title"><h2>Projects</h2></div>
     <div class="projects">
       <div class="card project-card">
-        <img src="https://via.placeholder.com/400x220" alt="Project">
+        <img src="library.png.jpeg"
+        /400x220" alt="Project">
         <h3>Library Management System</h3>
         <p>GUI-based Library Management using C++ and Qt</p>
         <span class="badge">C++</span><span class="badge">Qt</span>
       </div>
       <div class="card project-card">
-        <img src="https://via.placeholder.com/400x220" alt="Project">
+        <img src="atm machine.png.jpeg" alt="Project">
         <h3>ATM Management System</h3>
         <p>Academic ATM system using C</p>
         <span class="badge">C</span><span class="badge">CodeBlocks</span>
@@ -346,28 +492,49 @@
 
 <section id="contact">
   <div class="container">
-    <div class="section-title"><h2>Contact Me</h2></div>
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    
     <div class="contact-grid">
-      <div class="card">
-        <p><i class="fas fa-envelope"></i> lutfunessa817@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +880 1979031930</p>
-        <p><i class="fas fa-location-dot"></i> Chittagong, Bangladesh</p>
+      <div class="card info-card">
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>lutfunessa817@gmail.com</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <p>+88 01819031930</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-location-dot"></i>
+          <p>Sugandha housing society, Nasirabad, Chittagong</p>
+        </div>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="card form-card">
         <form>
-          <input type="text" placeholder="Your Name" required>
+          <input type="text" placeholder="your name" required>
           <input type="email" placeholder="Email" required>
-          <textarea rows="4" placeholder="Message"></textarea>
-          <button type="submit">Send Message</button>
+          <textarea rows="4" placeholder="your message"></textarea>
+          <button type="submit" class="send-btn">Send Message</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2025 Sayeda Lutfunnesa Priti. All Rights Reserved.
-</footer>
+
+      
+      
+
 
 <script>
   const text = "Undergrad Student | CSE Learner | UI/UX Enthusiast | Problem Solver";
