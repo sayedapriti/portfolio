@@ -307,14 +307,15 @@ form textarea {
   margin-bottom: 25px;
 }
 
-.info-item i {
-  font-size: 1.5rem;
-  color: #000;
+/* Gmail লিংকের স্টাইল ঠিক করার জন্য */
+.contact-link {
+    text-decoration: none; /* নিচের দাগ সরানোর জন্য */
+    color: inherit;        /* যেন আগের কালো রঙই থাকে */
+    transition: 0.3s;
 }
 
-.info-item p {
-  font-size: 1rem;
-  color: #333;
+.contact-link:hover {
+    color: #87CEEB;        /* মাউস নিলে আপনার প্রাইমারি কালার হবে */
 }
 
 
@@ -499,8 +500,12 @@ form input, form textarea {
     <div class="contact-grid">
       <div class="card info-card">
         <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <p>lutfunessa817@gmail.com</p>
+          
+<i class="fas fa-envelope"></i>
+<a href="mailto:lutfunnessa817@gmail.com" class="contact-link">
+   lutfunnessa817@gmail.com
+</a>
+
         </div>
         <div class="info-item">
           <i class="fas fa-phone"></i>
@@ -514,7 +519,10 @@ form input, form textarea {
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/sayedapriti" target="_blank">
+   <i class="fab fa-github"></i> 
+</a>
+          
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
